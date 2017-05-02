@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Pinterest FFFFOUND Import</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="icon" href="img/favicon.png"/>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+    <div class="faded">
+        <div id="intro" class="modal">
+            <h1>FFFFOUND!<br/>You&rsquo;ll be missed</h1>
+            <p>We take inspiration serious here at Pinterest and while we know ffffound.com is irreplaceable, we thought you might want to import your ffffindings so they can live on.
+            </p>
+            <p>
+                You&rsquo;ll need -
+            </p>
+            <ol>
+                <li>FFFFound account</li>
+                <li>Pinterest account</li>
+            </ol>
+            <div id="login" class="button">Login with Pinterest</div>
+        </div>
+        <div id="ffffound" class="modal">
+            <div class="clearfix">
+                <img id="ffffound_logo" src="img/ffffound_logo.gif"/>
+                <label for="ffffound">Enter your FFFFOUND username</label>
+                <input id="username" name="ffffound" type="text" placeholder="fffound username"/>
+                <div id="ffffound_import" class="button_red right">Import</div>
+                <div id="ffffound_error"></div>
+                <div id="loading_screen">
+                    <div class="loading_indicator">
+                        <img class="loading_spinner"
+                             src="img/loading-spinner-large@1x.png"
+                             srcset="img/loading-spinner-large@1x.png 1x, img/loading-indicator@2x.png 2x"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="success" class="modal">
+            <h1>Success!</h1>
+            <p>Your FFFFOUND images are being imported now and should be available shortly. If, for whatever reason, you do not see your images on your &ldquo;FFFFOUND Import&rdquo; board within an hour, please let us know at <a href="https://help.pinterest.com/en/contact" target="_blank">Pinterest Help Center</a>. So long FFFFOUND, thanks for all the ffffish.</p>
+            <a class="button" target="_blank">Go to my FFFFOUND board</a>
+        </div>
+    </div>
+</body>
+</html>
