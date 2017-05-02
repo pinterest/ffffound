@@ -86,6 +86,19 @@ function urlForImportBoard(completion) {
     });
 }
 
+function setupImport() {
+    var username = $('#username').val();
+    if (username.length == 0) {
+        setErrorMessage('Please enter a username.')
+        return;
+    }
+
+    setErrorMessage('');
+    showLoadingScreen(function () {
+        importFFFFound(username);
+    });
+}
+
 $(function() {
     $('#login').click(function() {
         PDK.login({
@@ -101,17 +114,11 @@ $(function() {
         });
     });
 
-    $('#ffffound_import').click(function() {
-        var username = $('#username').val();
-        if (username.length == 0) {
-            setErrorMessage('Please enter a username.')
-            return;
+    $('#ffffound_import').click(setupImport);
+    $('#username').keyup(function(event) {
+        if (event.keyCode == 13) {
+            setupImport();
         }
-
-        setErrorMessage('');
-        showLoadingScreen(function () {
-            importFFFFound(username);
-        });
     });
 });
 
