@@ -51,16 +51,16 @@ function setErrorUnknownMessage() {
 function transitionToStepTwo(animated) {
     var duration = animated? 200: 0;
     $('#intro').fadeOut(duration, function() {
-        $('#ffffound').fadeIn(duration);
+        $('#ffffound').fadeIn(duration, function() {
+            $('#username').focus();
+        });
     });
 }
 
 function transitionToStepThree() {
     var duration = 200;
     $('#ffffound').fadeOut(duration, function() {
-        $('#success').fadeIn(duration, function() {
-            $('#username').focus();
-        });
+        $('#success').fadeIn(duration);
     });
 }
 
