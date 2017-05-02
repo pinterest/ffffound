@@ -58,7 +58,9 @@ function transitionToStepTwo(animated) {
 function transitionToStepThree() {
     var duration = 200;
     $('#ffffound').fadeOut(duration, function() {
-        $('#success').fadeIn(duration);
+        $('#success').fadeIn(duration, function() {
+            $('#username').focus();
+        });
     });
 }
 
